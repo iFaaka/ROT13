@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Encriptado ROT13</title>
+</head>
+<body onload="initElement();">
+    
+    <h1>Hola</h1>
+
+
+
+        <textarea name="mensaje" id="textarea" cols="30" rows="10"></textarea>
+        <button id="button" >¡Encriptar!</button>
+
+        <p id="result"></p>
+
+        <textarea name="mensaje2" id="textarea2" cols="30" rows="10"></textarea>
+        <button id="button2" >¡Encriptar!</button>
+
+        <p id="result2"></p>
+
+
+
+    <script src="ROT13.js"></script>
+
+    <script >
+    
+    
+
+
+        
+    function initElement() {
+
+    let b = document.getElementById("button")
+    let result = document.getElementById("result")
+    b.onclick = encriptar
+
+    let b2 = document.getElementById("button2")
+    let result2 = document.getElementById("result2")
+    b2.onclick = encriptar2
+
+    }
+
+    function encriptar(event){
+
+        if($(textarea).val().length > 1) {
+            result.textContent = `Su mensaje encriptado es: ${rot13(($(textarea).val()).toUpperCase())} `
+        
+        }
+        
+
+
+    }
+
+    function encriptar2(event){
+
+        if($(textarea2).val().length > 1) {
+            result2.textContent = `Su mensaje encriptado es: ${normalText(($(textarea2).val()).toUpperCase())} `
+        
+        }
+
+    }
+
+
+
+    </script>
+
+</body>
+</html>
