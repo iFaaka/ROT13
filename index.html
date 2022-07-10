@@ -8,22 +8,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>Encriptado ROT13</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body onload="initElement();">
-    
-    <h1>Hola</h1>
+    <div id="app">
+        <h1>¡Bienvenidos al superpoderoso encriptador ROT13!</h1>
 
 
-
-        <textarea name="mensaje" id="textarea" cols="30" rows="10"></textarea>
-        <button id="button" >¡Encriptar!</button>
-
+        <div class="containerText">
+            <textarea name="mensaje" id="textarea"></textarea>
+            <button id="button" >¡Encriptar!</button>
+            
+        </div>
         <p id="result"></p>
 
-        <textarea name="mensaje2" id="textarea2" cols="30" rows="10"></textarea>
-        <button id="button2" >¡Encriptar!</button>
-
-        <p id="result2"></p>
+        
+    </div>
+    
 
 
 
@@ -58,18 +59,8 @@
 
     }
 
-    function encriptar2(event){
-
-        if($(textarea2).val().length > 1) {
-            result2.textContent = `Su mensaje encriptado es: ${normalText(($(textarea2).val()).toUpperCase())} `
-         
-        }
-
-    }
-
-
-
-    </script>
+    
+</script>
 
 </body>
 </html>
